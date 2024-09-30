@@ -1,0 +1,45 @@
+.center {
+    @apply flex flex-col justify-center h-max items-center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*height: 100vh;*/
+    /*flex-direction: column;*/
+}
+
+
+.content {
+    @apply w-full flex flex-col items-center gap-5 pt-7;
+}
+
+.searchBar {
+    @apply relative w-full flex justify-center items-center gap-5;
+}
+
+.hstack {
+  @apply w-full flex justify-around;
+}
+
+.heading {
+    @apply w-full flex justify-center items-center text-2xl mb-5 text-center text-gray-800 ;
+}
+.image {
+    @apply w-16 ml-2;
+}
+
+.button {
+    height: 80px;
+    width: 48%;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}

@@ -5,18 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c19ab382-aa9e-413b-8e2e-a4f1b2747232" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/books/[id]/route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/books/route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/recipes/[id]/route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/recipes/route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/recipes/[id]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/recipes/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/booksSchema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/schemas/recipesSchema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/database.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.local.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Home.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/recipe/AddRecipe/AddRecipe.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/recipe/AddRecipe/AddRecipe.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/search/Search.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/search/Search.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/newrecipe/page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/newrecipe/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/recipes/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/adaptive-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/book.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/nativebase-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/salad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/splash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/books/route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/books/route.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/recipes/[id]/route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/recipes/[id]/route.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/recipes/route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/recipes/route.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app-demo/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/recipes/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/recipes/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/recipes/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/recipes/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/booksSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/booksSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/recipesSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/recipesSchema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +49,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gusmarchand&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:gusmarchand/recipes_next14.git&quot;,
+    &quot;accountId&quot;: &quot;9214b505-0d8f-45a2-b090-60a965bba893&quot;
+  }
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/Cellar/php/8.2.7_1/bin/php" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -41,36 +73,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/augustinmarchand/projets/recipes/client/recipes_next14/app/api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/augustinmarchand/projets/recipes/client/recipes_next14/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/augustinmarchand/projets/recipes/client/recipes_next14/app/api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/augustinmarchand/projets/recipes/client/recipes_next14/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/api" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/app/components/recipe/AddRecipe" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/api/recipes" />
       <recent name="$PROJECT_DIR$/app/api" />
-      <recent name="$PROJECT_DIR$/src/app/lib" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
-        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23339.16" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23339.16" />
       </set>
     </attachedChunks>
   </component>
@@ -84,7 +118,13 @@
       <updated>1726062566872</updated>
       <workItem from="1726062568533" duration="3691000" />
       <workItem from="1726122184156" duration="2069000" />
-      <workItem from="1726124262698" duration="10080000" />
+      <workItem from="1726124262698" duration="19747000" />
+      <workItem from="1726147952511" duration="9703000" />
+      <workItem from="1726492525836" duration="105000" />
+      <workItem from="1726492672756" duration="614000" />
+      <workItem from="1727338637704" duration="3797000" />
+      <workItem from="1727436270027" duration="10759000" />
+      <workItem from="1727704365408" duration="7833000" />
     </task>
     <servers />
   </component>

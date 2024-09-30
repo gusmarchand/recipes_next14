@@ -9,7 +9,6 @@ export const GET = async (req :Request, {params}: {params : {id:string}}) => {
         const collection = await connectToCollection('recipes');
         const { id } = params;
 
-        console.log(id);
 
         if (!ObjectId.isValid(id)) {
             return NextResponse.json({ error: "Invalid ID format" }, { status: 400 });

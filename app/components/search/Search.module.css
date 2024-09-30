@@ -1,0 +1,10 @@
+.searchResults {
+    @apply absolute top-20 w-full flex-col bg-white z-50 shadow-md;
+}
+.searchResult {
+    @apply p-2.5 border-b-2 border-gray-300 cursor-pointer;
+
+}
+.tagText {
+    @apply text-gray-500 text-sm font-bold;
+}

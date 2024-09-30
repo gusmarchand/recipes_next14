@@ -2,12 +2,12 @@ import client from "@/lib/mongodb";
 import {NextResponse, NextRequest} from "next/server";
 import { recipeSchema, Recipe} from "@/app/schemas/recipesSchema";
 import {connectToCollection} from "@/lib/database";
+import {ObjectId} from "mongodb";
 
 export const GET = async () => {
     try {
         const collection = await connectToCollection('recipes');
         const recipes = await collection.find({}).toArray();
-        console.log(recipes);
         return NextResponse.json(recipes);
     }
     catch (error) {
@@ -18,12 +18,22 @@ export const GET = async () => {
 
 export const POST = async (req: NextRequest) => {
     try {
-        const body = await req.json();
-        const validatedRecipe = recipeSchema.parse(body);
+        const data = await req.json();
+
+        const rawFormData = {
+            title: data.title,
+            category: data.category,
+            description: data.description,
+            page: data.page,
+            link: data.link,
+            recipeIngredients: data.recipeIngredients,
+            book: new ObjectId(data.bookId),
+            isVeggie: data.isVeggie
+        };
+        const validatedRecipe = recipeSchema.parse(rawFormData);
 
         const collection = await connectToCollection('recipes');
         const result = await collection.insertOne(validatedRecipe);
-        console.log(result);
         return NextResponse.json({ success: true, id: result.insertedId }, { status: 201 });
     } catch (error : any) {
         console.error(error);

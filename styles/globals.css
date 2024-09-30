@@ -1,27 +1,62 @@
+/* Importation des directives Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Définition des variables de couleur pour le mode clair et le mode sombre */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb-light: 0, 0, 0;
+  --background-start-rgb-light: 214, 219, 220;
+  --background-end-rgb-light: 255, 255, 255;
+
+  --foreground-rgb-dark: 255, 255, 255;
+  --background-start-rgb-dark: 0, 0, 0;
+  --background-end-rgb-dark: 0, 0, 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+
+/* Mode clair */
+html {
+  --foreground-rgb: var(--foreground-rgb-light);
+  --background-start-rgb: var(--background-start-rgb-light);
+  --background-end-rgb: var(--background-end-rgb-light);
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark){
+  html {
+    --foreground-rgb: var(--foreground-rgb-dark);
+    --background-start-rgb: var(--background-start-rgb-dark);
+    --background-end-rgb: var(--background-end-rgb-dark);
   }
+
 }
 
+/* Styles globaux */
 body {
+  background: rgb(var(--background-start-rgb));
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  transition: background-color 0.3s, color 0.3s;
 }
+
+a {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+input, textarea, select {
+  @apply bg-white dark:bg-gray-800 text-black dark:text-white border-gray-300 dark:border-gray-700;
+}
+
+input:focus, textarea:focus, select:focus {
+  @apply border-blue-500 dark:border-blue-300 outline-none;
+}
+
+button {
+  @apply bg-blue-600 dark:bg-blue-500 text-white border-none rounded-md py-2 px-4 cursor-pointer transition-colors;
+}
+
+button:hover {
+  @apply bg-blue-700 dark:bg-blue-600;
+}
+

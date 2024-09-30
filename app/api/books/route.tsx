@@ -7,7 +7,6 @@ export const GET = async () => {
     try {
         const collection = await connectToCollection('books');
         const books = await collection.find({}).toArray();
-        console.log(books);
         return NextResponse.json(books);
     }
     catch (error) {
@@ -20,11 +19,19 @@ export const GET = async () => {
 export const POST = async (req: NextRequest) => {
     try {
         const body = await req.json();
-        const validatedBook = bookSchema.parse(body);
+
+        const rawFormData = {
+            title: body.title,
+            author: body.author,
+            description: body.description,
+            imgUrl: body.img,
+            recipes: body.recipes,
+        }
+
+        const validatedBook = bookSchema.parse(rawFormData);
 
         const collection = await connectToCollection('books');
         const result = await collection.insertOne(validatedBook);
-        console.log(result);
         return NextResponse.json({ success: true, id: result.insertedId }, { status: 201 });
     } catch (error : any) {
         console.error(error);
